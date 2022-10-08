@@ -1,0 +1,12 @@
+body {
+    background: url("https://nebigdatahub.org/wp-content/uploads/2019/11/7T9364v.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#add {
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+}
