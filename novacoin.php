@@ -50,7 +50,7 @@
                             echo "<option value=".$data[$x]['id'].">";
                         }
                     ?>
-                  </datalist>
+                </datalist>
             </div>
 
             <div class="mb-3">
