@@ -71,17 +71,17 @@
     <button type="button" data-bs-toggle="modal" data-bs-target="#addCoin"><a href="#" id="add"><i class="fa-solid fa-cart-plus"></i></a></button>
 
     <!-- Modal -->
-    <div class="modal fade" id="addCoin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addCoin" tabindex="-1" aria-labelledby="ModalAddCoin" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar nova moeda</h1>
+            <h1 class="modal-title fs-5" id="ModalAddCoin">Adicionar nova moeda</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
             
             <div class="input-group mb-3">
-                <span class="input-group-text col-3" id="basic-addon1">Moeda</span>
+                <span class="input-group-text col-3" style="margin: 0 auto !important; float: none !important;">Moeda</span>
                 <input list="coins" class="form-control" placeholder="" aria-describedby="basic-addon1">
             </div>
             
@@ -96,13 +96,13 @@
             </datalist>
 
             <div class="input-group mb-3">
-                <span class="input-group-text col-3" id="basic-addon1">Quantidade</span>
-                <input class="form-control" placeholder="" aria-describedby="basic-addon1">
+                <span class="input-group-text col-3">Quantidade</span>
+                <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon1">
             </div>
 
             <div class="input-group mb-3">
-                <span class="input-group-text col-3 text-center" id="basic-addon1">Valor</span>
-                <input class="form-control" placeholder="" aria-describedby="basic-addon1">
+                <span class="input-group-text col-3" id="basic-addon1">Valor</span>
+                <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon1">
             </div>
 
             </div>
