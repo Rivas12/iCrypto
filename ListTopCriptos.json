@@ -1,0 +1,502 @@
+[
+    {
+        "id": 0,
+        "name": "bitcoin",
+        "symbol": "BTC"
+    },
+    {
+        "id": 1,
+        "name": "Ethereum",
+        "symbol": "ETH"
+    },
+    {
+        "id": 2,
+        "name": "Tether",
+        "symbol": "USDT"
+    },
+    {
+        "id": 3,
+        "name": "BNB",
+        "symbol": "BNB"
+    },
+    {
+        "id": 4,
+        "name": "USD_Coin",
+        "symbol": "USDC"
+    },
+    {
+        "id": 5,
+        "name": "XRP",
+        "symbol": "XRP"
+    },
+    {
+        "id": 6,
+        "name": "Binance_USD",
+        "symbol": "BUSD"
+    },
+    {
+        "id": 7,
+        "name": "Cardano",
+        "symbol": "ADA"
+    },
+    {
+        "id": 8,
+        "name": "Solana",
+        "symbol": "SOL"
+    },
+    {
+        "id": 9,
+        "name": "Dogecoin",
+        "symbol": "DOGE"
+    },
+    {
+        "id": 10,
+        "name": "Polygon",
+        "symbol": "MATIC"
+    },
+    {
+        "id": 11,
+        "name": "Polkadot",
+        "symbol": "DOT"
+    },
+    {
+        "id": 12,
+        "name": "Dai",
+        "symbol": "DAI"
+    },
+    {
+        "id": 13,
+        "name": "Shiba_Inu",
+        "symbol": "SHIB"
+    },
+    {
+        "id": 14,
+        "name": "TRON",
+        "symbol": "TRX"
+    },
+    {
+        "id": 15,
+        "name": "Uniswap",
+        "symbol": "UNI"
+    },
+    {
+        "id": 16,
+        "name": "Avalanche",
+        "symbol": "AVAX"
+    },
+    {
+        "id": 17,
+        "name": "Wrapped_Bitcoin",
+        "symbol": "WBTC"
+    },
+    {
+        "id": 18,
+        "name": "UNUS_SED_LEO",
+        "symbol": "LEO"
+    },
+    {
+        "id": 19,
+        "name": "Litecoin",
+        "symbol": "LTC"
+    },
+    {
+        "id": 20,
+        "name": "Cosmos",
+        "symbol": "ATOM"
+    },
+    {
+        "id": 21,
+        "name": "Chainlink",
+        "symbol": "LINK"
+    },
+    {
+        "id": 22,
+        "name": "Ethereum_Classic",
+        "symbol": "ETC"
+    },
+    {
+        "id": 23,
+        "name": "FTX Token",
+        "symbol": "FTT"
+    },
+    {
+        "id": 24,
+        "name": "Stellar",
+        "symbol": "XLM"
+    },
+    {
+        "id": 25,
+        "name": "Cronos",
+        "symbol": "CRO"
+    },
+    {
+        "id": 26,
+        "name": "Monero",
+        "symbol": "XMR"
+    },
+    {
+        "id": 27,
+        "name": "NEAR_Protocol",
+        "symbol": "NEAR"
+    },
+    {
+        "id": 28,
+        "name": "Algorand",
+        "symbol": "ALGO"
+    },
+    {
+        "id": 29,
+        "name": "Bitcoin_Cash",
+        "symbol": "BCH"
+    },
+    {
+        "id": 30,
+        "name": "Bitcoin_BEP2",
+        "symbol": "BTCB"
+    },
+    {
+        "id": 31,
+        "name": "Quant",
+        "symbol": "QNT"
+    },
+    {
+        "id": 32,
+        "name": "Flow",
+        "symbol": "FLOW"
+    },
+    {
+        "id": 33,
+        "name": "VeChain",
+        "symbol": "VET"
+    },
+    {
+        "id": 34,
+        "name": "Filecoin",
+        "symbol": "FIL"
+    },
+    {
+        "id": 35,
+        "name": "Terra_Classic",
+        "symbol": "LUNC"
+    },
+    {
+        "id": 36,
+        "name": "ApeCoin",
+        "symbol": "APE"
+    },
+    {
+        "id": 37,
+        "name": "Internet_Computer",
+        "symbol": "ICP"
+    },
+    {
+        "id": 38,
+        "name": "Huobi_Token",
+        "symbol": "HT"
+    },
+    {
+        "id": 39,
+        "name": "Hedera",
+        "symbol": "HBAR"
+    },
+    {
+        "id": 40,
+        "name": "Elrond",
+        "symbol": "EGLD"
+    },
+    {
+        "id": 41,
+        "name": "Tezos",
+        "symbol": "XTZ"
+    },
+    {
+        "id": 42,
+        "name": "Aptos",
+        "symbol": "APT"
+    },
+    {
+        "id": 43,
+        "name": "Chiliz",
+        "symbol": "CHZ"
+    },
+    {
+        "id": 44,
+        "name": "Decentraland",
+        "symbol": "MANA"
+    },
+    {
+        "id": 45,
+        "name": "Aave",
+        "symbol": "AAVE"
+    },
+    {
+        "id": 46,
+        "name": "The_Sandbox",
+        "symbol": "SAND"
+    },
+    {
+        "id": 47,
+        "name": "EOS",
+        "symbol": "EOS"
+    },
+    {
+        "id": 48,
+        "name": "Theta_Network",
+        "symbol": "THETA"
+    },
+    {
+        "id": 49,
+        "name": "KuCoin_Token",
+        "symbol": "KCZ"
+    },
+    {
+        "id": 50,
+        "name": "OKB",
+        "symbol": "OKB"
+    },
+    {
+        "id": 51,
+        "name": "Pax_Dollar",
+        "symbol": "USDP"
+    },
+    {
+        "id": 52,
+        "name": "Bitcoin_SV",
+        "symbol": "BSV"
+    },
+    {
+        "id": 53,
+        "name": "Maker",
+        "symbol": "MKR"
+    },
+    {
+        "id": 54,
+        "name": "Axie_Infinity",
+        "symbol": "AXS"
+    },
+    {
+        "id": 55,
+        "name": "Zcash",
+        "symbol": "ZEC"
+    },
+    {
+        "id": 56,
+        "name": "TrueUSD",
+        "symbol": "TUSD"
+    },
+    {
+        "id": 57,
+        "name": "BitTorrent",
+        "symbol": "BTTOLD"
+    },
+    {
+        "id": 58,
+        "name": "EthereumPoW",
+        "symbol": "ETHW"
+    },
+    {
+        "id": 59,
+        "name": "BitTorrent_(New)",
+        "symbol": "BTT"
+    },
+    {
+        "id": 60,
+        "name": "Synthetix",
+        "symbol": "SNX"
+    },
+    {
+        "id": 61,
+        "name": "Klaytn",
+        "symbol": "KLAY"
+    },
+    {
+        "id": 62,
+        "name": "eCash",
+        "symbol": "XEC"
+    },
+    {
+        "id": 63,
+        "name": "USDD",
+        "symbol": "USDD"
+    },
+    {
+        "id": 64,
+        "name": "IOTA",
+        "symbol": "MIOTA"
+    },
+    {
+        "id": 65,
+        "name": "Neutrino_USD",
+        "symbol": "USDN"
+    },
+    {
+        "id": 66,
+        "name": "PancakeSwap",
+        "symbol": "CAKE"
+    },
+    {
+        "id": 67,
+        "name": "Neo",
+        "symbol": "NEO"
+    },
+    {
+        "id": 68,
+        "name": "The_Graph",
+        "symbol": "GRT"
+    },
+    {
+        "id": 69,
+        "name": "Fantom",
+        "symbol": "FTM"
+    },
+    {
+        "id": 70,
+        "name": "Nexo",
+        "symbol": "NEXO"
+    },
+    {
+        "id": 71,
+        "name": "Helium",
+        "symbol": "HNT"
+    },
+    {
+        "id": 72,
+        "name": "PAX_Gold",
+        "symbol": "PAXG"
+    },
+    {
+        "id": 73,
+        "name": "Lido_DAO",
+        "symbol": "LDO"
+    },
+    {
+        "id": 74,
+        "name": "THORChain",
+        "symbol": "RUNE"
+    },
+    {
+        "id": 75,
+        "name": "Curve_DAO_Token",
+        "symbol": "CRV"
+    },
+    {
+        "id": 76,
+        "name": "GateToken",
+        "symbol": "GT"
+    },
+    {
+        "id": 77,
+        "name": "Trust_Wallet_Token",
+        "symbol": "TWT"
+    },
+    {
+        "id": 78,
+        "name": "Casper",
+        "symbol": "CSPR"
+    },
+    {
+        "id": 79,
+        "name": "Kava",
+        "symbol": "KAVA"
+    },
+    {
+        "id": 80,
+        "name": "Dash",
+        "symbol": "DASH"
+    },
+    {
+        "id": 81,
+        "name": "WEMIX",
+        "symbol": "WEMIX"
+    },
+    {
+        "id": 82,
+        "name": "Enjin_Coin",
+        "symbol": "ENJ"
+    },
+    {
+        "id": 83,
+        "name": "Mina",
+        "symbol": "MINA"
+    },
+    {
+        "id": 84,
+        "name": "Basic_Attention_Token",
+        "symbol": "BAT"
+    },
+    {
+        "id": 85,
+        "name": "Stacks",
+        "symbol": "STX"
+    },
+    {
+        "id": 86,
+        "name": "Fei USD",
+        "symbol": "FEI"
+    },
+    {
+        "id": 87,
+        "name": "Zilliqa",
+        "symbol": "ZIL"
+    },
+    {
+        "id": 88,
+        "name": "Convex_Finance",
+        "symbol": "CVX"
+    },
+    {
+        "id": 89,
+        "name": "BinaryX",
+        "symbol": "BNX"
+    },
+    {
+        "id": 90,
+        "name": "Decred",
+        "symbol": "DCR"
+    },
+    {
+        "id": 91,
+        "name": "XDC_Network",
+        "symbol": "XDC"
+    },
+    {
+        "id": 92,
+        "name": "Compound",
+        "symbol": "COMP"
+    },
+    {
+        "id": 93,
+        "name": "Ravencoin",
+        "symbol": "RVN"
+    },
+    {
+        "id": 94,
+        "name": "1inch",
+        "symbol": "1INCH"
+    },
+    {
+        "id": 95,
+        "name": "TerraClassicUSD",
+        "symbol": "USTC"
+    },
+    {
+        "id": 96,
+        "name": "Waves",
+        "symbol": "WAVES"
+    },
+    {
+        "id": 97,
+        "name": "Loopring",
+        "symbol": "LRC"
+    },
+    {
+        "id": 98,
+        "name": "Ethereum_Name_Service",
+        "symbol": "ENS"
+    },
+    {
+        "id": 99,
+        "name": "NEM",
+        "symbol": "XEM"
+    }
+]

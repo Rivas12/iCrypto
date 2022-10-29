@@ -9,23 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <script>
-        function ajax(){
-            $.ajax({
-                url: "testsAjax.php",
-                type: "post",
-                dataType: 'text',
-                data: {value: "true"},
-                success: function(response){
-                    
-                    console.log(response);
-                },
-                error: function(response){
-                    alert("error!!!");
-                }
-            });
-        }
-    </script>
+    <script src="js.js"></script>
+    <script src="ajax.js"></script>
 </head>
 <body>
     <div class="row">
@@ -101,27 +86,27 @@
             
             <div class="input-group mb-3">
                 <span class="input-group-text col-3" style="margin: 0 auto !important; float: none !important;">Moeda</span>
-                <input list="coins" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                <input list="coins" class="form-control" placeholder="" id="moedaInput">
             </div>
             
             <datalist id="coins">
                 <?php
-                    $data = json_decode(file_get_contents("http://api.coingecko.com/api/v3/coins"), true);
+                    $data = json_decode(file_get_contents("listTopCriptos.json"), true);
 
                     for ($x = 0; $x <= (count($data) - 1); $x++) {
-                        echo "<option value=".$data[$x]['id'].">";
+                        echo "<option value=".$data[$x]['name'].">";
                     }
                 ?>
             </datalist>
 
             <div class="input-group mb-3">
                 <span class="input-group-text col-3">Quantidade</span>
-                <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                <input type="number" class="form-control" placeholder="" id="qtdInput" value="1">
             </div>
 
             <div class="input-group mb-3">
-                <span class="input-group-text col-3" id="basic-addon1">Valor</span>
-                <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                <span class="input-group-text col-3" id="basic-addon1">Valor (R$)</span>
+                <input type="number" class="form-control" placeholder="" id="valorInput">
             </div>
 
             </div>
