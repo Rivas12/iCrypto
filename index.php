@@ -10,9 +10,27 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="js.js"></script>
-    <script src="ajax.js"></script>
+    <script>
+        function ajax(){
+            $.ajax({
+                url: "ajax.php",
+                type: "POST",
+                dataType: 'text',
+                data: {user_id: "1", coin_id: "1", symbol: "doge", name: $("#coinInput").val(), price: "2", quantity: $("#quantityInput").val()},
+                success: function(response){
+                    console.log(response);
+                },
+                error: function(response){
+                    alert("error!!!");
+                }
+            });
+        }
+    </script>
 </head>
 <body>
+
+    <?php include "database_connect.php" ?>
+
     <div class="row">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-between">
             <div class="container">
@@ -86,7 +104,7 @@
             
             <div class="input-group mb-3">
                 <span class="input-group-text col-3" style="margin: 0 auto !important; float: none !important;">Moeda</span>
-                <input list="coins" class="form-control" placeholder="" id="moedaInput">
+                <input list="coins" class="form-control" placeholder="" id="coinInput">
             </div>
             
             <datalist id="coins">
@@ -101,7 +119,7 @@
 
             <div class="input-group mb-3">
                 <span class="input-group-text col-3">Quantidade</span>
-                <input type="number" class="form-control" placeholder="" id="qtdInput" value="1">
+                <input type="number" class="form-control" placeholder="" id="quantityInput" value="1">
             </div>
 
             <div class="input-group mb-3">
