@@ -9,8 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
     <!-- notificações -->
-    <link href="jquerytoast.css" rel="stylesheet">
-    <script src="jquerytoast.js"></script>
+    <link href="notifications/jquerytoast.css" rel="stylesheet">
+    <script src="notifications/jquerytoast.js"></script>
 
 
     
@@ -25,7 +25,7 @@
     <script>
         function ajax(){
             $.ajax({
-                url: "ajax.php",
+                url: "ajax/ajax.php",
                 type: "POST",
                 dataType: 'text',
                 data: {user_id: "1", coin_id: "1", symbol: "doge", name: $("#coinInput").val(), price: "2", quantity: $("#quantityInput").val()},

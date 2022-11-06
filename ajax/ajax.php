@@ -2,7 +2,7 @@
 
 function save_to_bank(){
 
-        include "database_connect.php";
+        include "../database_connect.php";
 
         date_default_timezone_set('America/Sao_Paulo');
 
