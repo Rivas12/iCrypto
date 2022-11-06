@@ -16,7 +16,7 @@
     
     <script src="https://kit.fontawesome.com/dbfe581b9a.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 
     <script src="js.js"></script>
 </head>
@@ -154,7 +154,7 @@
             
             <datalist id="coins">
                 <?php
-                    $data = json_decode(file_get_contents("listTopCriptos.json"), true);
+                    $data = json_decode(file_get_contents("json/listTopCriptos.json"), true);
 
                     for ($x = 0; $x <= (count($data) - 1); $x++) {
                         echo "<option value=".$data[$x]['name'].">";
