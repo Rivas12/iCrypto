@@ -15,15 +15,12 @@ function save_to_bank(){
         $date = date("Y-m-d h:i:s");
 
 
-        $result = mysqli_query($conn, "INSERT INTO `purchased_coins` (`user_id`, `coin_id`, `name`, `symbol`, `price_buy`, `quantity`, `date`) VALUES ('$user_id', '$coin_id', '$name', '$symbol', '$price_buy', '$quantity', '$date');");
-        
-        if($result){
-                return "nice!";
+        if(mysqli_query($conn, "INSERT INTO `purchased_coins` (`user_id`, `coin_id`, `name`, `symbol`, `price_buy`, `quantity`, `date`) VALUES ('$user_id', '$coin_id', '$name', '$symbol', '$price_buy', '$quantity', '$date');")){
+                return "true";
         }else{
-                return "erro!";
+                return "false";
         }
                 
 }
 echo save_to_bank();
-        
 ?>

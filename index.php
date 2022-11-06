@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="js.js"></script>
+</head>
+<body>
+    <!-- notification -->
     <script>
         function ajax(){
             $.ajax({
@@ -26,27 +29,49 @@
                 type: "POST",
                 dataType: 'text',
                 data: {user_id: "1", coin_id: "1", symbol: "doge", name: $("#coinInput").val(), price: "2", quantity: $("#quantityInput").val()},
-                success: function(response){
-                    console.log(response);
+                beforeSend: function(response){
+                    $.toast({
+                        heading: 'ENVIANDO',
+                        text: 'enviado para o banco de dados!',
+                        showHideTransition: 'fade',
+                        hideAfter: 2000,
+                        position: 'top-right',
+                        icon: 'warning'
+                    });
                 },
+                success: function(response){
+                    if(response == "true"){
+                        $.toast({
+                            heading: 'SALVO',
+                            text: 'guardado no banco de dados...',
+                            showHideTransition: 'slide',
+                            hideAfter: 4000,
+                            position: 'top-right',
+                            icon: 'success'
+                        });
+                    }else{
+                        $.toast({
+                            heading: 'ERRO!',
+                            text: 'Ocorreu um erro ao salvar no banco de dados! Tente novamente',
+                            showHideTransition: 'slide',
+                            hideAfter: 4000,
+                            position: 'top-right',
+                            icon: 'error'
+                        });
+                    }
+                    },
                 error: function(response){
-                    alert("error!!!");
-                }
+                        $.toast({
+                            heading: 'ERRO!',
+                            text: 'Ocorreu um erro interno!',
+                            showHideTransition: 'slide',
+                            hideAfter: 4000,
+                            position: 'top-right',
+                            icon: 'error'
+                        });
+                },
             });
         }
-    </script>
-</head>
-<body>
-    <!-- notification tests -->
-    <script>
-        $.toast({
-            heading: 'warning',
-            text: 'testing',
-            showHideTransition: 'fade',
-            hideAfter: 2000,
-            position: 'top-right',
-            icon: 'warning'
-        });
     </script>
 
     <?php include "database_connect.php" ?>
@@ -150,7 +175,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary" onclick="ajax();">Salvar moeda</button>
+                <button type="button" class="btn btn-primary" onclick="ajax();" data-bs-dismiss="modal">Salvar moeda</button>
             </div>
         </div>
         </div>
