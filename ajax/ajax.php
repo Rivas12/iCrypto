@@ -10,7 +10,7 @@ function save_to_bank(){
         $coin_id = $_POST["coin_id"];
         $symbol = $_POST["symbol"];
         $name = $_POST["name"];
-        $price_buy = $_POST["price"];
+        $price_buy = json_decode(file_get_contents('http://api.coingecko.com/api/v3/coins/' . strtolower($_POST["name"])), true)['market_data']['current_price']['brl'];
         $quantity = $_POST["quantity"];
         $date = date("Y-m-d h:i:s");
 

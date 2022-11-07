@@ -24,11 +24,18 @@
     <!-- notification -->
     <script>
         function ajax(){
+            $.get( "json/ListTopCriptos.json", function(data_symbol) {
+                for (let i = 0; i < data_symbol.length; i++) {
+                    if(data_symbol[i]["name"] == $("#coinInput").val()){
+                        $symbol_coin = data_symbol[i]["symbol"];
+                        break
+                    }
+                }
             $.ajax({
                 url: "ajax/ajax.php",
                 type: "POST",
                 dataType: 'text',
-                data: {user_id: "1", coin_id: "1", symbol: "doge", name: $("#coinInput").val(), price: "2", quantity: $("#quantityInput").val()},
+                data: {user_id: "1", coin_id: "1", symbol: $symbol_coin, name: $("#coinInput").val(), price: $("#valorInput").val(), quantity: $("#quantityInput").val()},
                 beforeSend: function(response){
                     $.toast({
                         heading: 'ENVIANDO',
@@ -71,6 +78,7 @@
                         });
                 },
             });
+        });
         }
     </script>
 
@@ -109,21 +117,45 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+                $counter = 1;
+
+                $query = mysqli_query($conn, "SELECT * FROM `purchased_coins`");
+
+                while ($row = mysqli_fetch_assoc($query)) {
+                    $data_coin = json_decode(file_get_contents('http://api.coingecko.com/api/v3/coins/' . strtolower($row['name'])), true);
+                    $flutuacao = $row['price_buy'] - $data_coin['market_data']['current_price']['brl'];
+                    $color_flutuacao = "";
+
+                    if($flutuacao == 0){
+                        $color_flutuacao = "yellow";
+                    }elseif ($flutuacao > 0) {
+                        $color_flutuacao = "green";
+                    } else {
+                        $color_flutuacao = "red";
+                    }
+                    
+
+                    echo "
                 <tr>
-                    <th scope="row">#1</th>
-                    <td><img src="https://assets.coingecko.com/coins/images/5/small/dogecoin.png?1547792256" alt="" width="18" height="18"></td>
-                    <td>Dogecoin</td>
-                    <td>doge</td>
-                    <td>1</td>
-                    <td>0,23</td>
-                    <td>R$ 0,33</td>
-                    <td style="color: green;">R$ 0,10</td>
+                    <th scope='row'>#$counter</th>
+                    <td><img src='".$data_coin['image']['small']."' alt='' width='18' height='18'></td>
+                    <td>$row[name]</td>
+                    <td>$row[symbol]</td>
+                    <td>$row[quantity]</td>
+                    <td>R$ $row[price_buy]</td>
+                    <td>R$ ".$data_coin['market_data']['current_price']['brl']."</td>
+                    <td style='color: $color_flutuacao;'>R$ ".number_format($flutuacao, 4, ',', '')."</td>
                     <td>
-                        <a href="" title="vender"><i class="fa-solid fa-money-bill"></i></a>
-                        <a href="" title="editar"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a href="" title="deleter"><i class="fa-solid fa-trash"></i></a>
+                        <a href='' title='vender'><i class='fa-solid fa-money-bill'></i></a>
+                        <a href='' title='editar'><i class='fa-solid fa-pen-to-square'></i></a>
+                        <a href='' title='deleter'><i class='fa-solid fa-trash'></i></a>
+                        <a href='' title='info'><i class='fa-solid fa-circle-info'></i></a>
                     </td>
-                </tr>
+                </tr>";
+                $counter++;
+                }
+                ?>
                 </tbody>
             </table>
         </div>

@@ -1,7 +1,9 @@
 body {
     background: url("https://nebigdatahub.org/wp-content/uploads/2019/11/7T9364v.gif");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
+    background-position: center center;
+    min-height: 100%;
 }
 #add {
     position: fixed;
